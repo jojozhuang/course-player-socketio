@@ -1,0 +1,33 @@
+﻿html, body {
+    background-color: #ccffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.playercontainer {
+    background-color: #99bbff;
+    border: thick solid #808080;
+    padding: 20px;
+    margin: 20px;
+}
+
+canvas {
+	background: #fff;
+    margin: 0;
+    padding: 0;
+	border: 5px solid #E8E8E8;
+    display: block;
+    
+}
+table, th, td {
+    /*border: 1px solid black;*/
+    padding: 0px;
+    margin: 0px;
+}

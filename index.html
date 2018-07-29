@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Course Player - Socket.IO</title>
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="client/player.js"></script>
+  <script type="text/javascript">
+    var socket = io.connect();
+    // Get server time
+    socket.on('message', function (time) {
+      document.getElementById('time').innerHTML = time;
+    });
+    // Get course data by second from server
+    socket.on('playCourse', function (data) {
+      drawScreenshot(data.ssdata, $('#workingss'), $('#playerss'));
+      drawWhiteboard(data.wbdata, $('#workingwb'), $('#playerwb'));
+    });
+  </script>
+  <link href="/public/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/public/css/Site.css" rel="stylesheet" type="text/css" />
+  <script src="/public/scripts/jquery-1.10.2.min.js"></script>
+  <script src="/public/scripts/bootstrap.min.js"></script>
+  <!--jquery slider bar-->
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+</head>
+<body>
+    <div>
+        <h1>Course Player</h1>
+        <p>Built with <a href='https://socket.io/'>Socket.IO</a>, <a href='https://nodejs.org'>Node.js</a> and <a href='https://jquery.com/'>jQuery</a></p>
+        <p>Current server time is: <span id="time"></span></p>
+    </div>
+    <div class="playercontainer">
+        <table style="width:100%;" align="center">
+            <tr>
+                <td align="left"><label for="currenttime">Current Time:</label><input type="text" id="currenttime" readonly style="border:0; color:#f6931f; font-weight:bold;"></td>
+                <td colspan="2" align="right"><input type="button" id="btnplay" value="Play"/></td>
+                <td align="right"><label for="total">Total Time:</label><input type="text" id="total" readonly style="border:0; color:#f6931f; font-weight:bold;"></td>
+            </tr>
+            <tr><td colspan="4"><div id="processbar" style="margin-top:10px"></div></td></tr>
+            <tr><td colspan="2" align="left"><canvas id="playerss" width="500" height="300" style="margin-top:10px"></canvas></td><td colspan="2" align="right"><canvas id="playerwb" width="500" height="300" style="margin-top:10px"></canvas></td></tr>
+        </table>
+        <canvas id="workingss" style="display:none" width="500" height="300"></canvas>
+        <canvas id="workingwb" style="display:none" width="500" height="300"></canvas>
+    </div>
+  <div>
+    <footer className="container-fluid text-center">
+      <p>&copy; 2016 jojozhuang.github.io, All rights reserved.</p>
+    </footer>
+  </div>
+  <!--Add script to update the page and send messages.-->
+  <script type="text/javascript">
+    $(function () {
+        // use jquery slider control to create process bar
+        $("#processbar").slider({
+            range: "max",
+            min: 0,
+            max: 4 * 60 * 60 - 30 * 60,
+            value: 0,
+            slide: function (event, ui) {
+                $("#currenttime").val(getReadableTimeText(ui.value));
+            },
+            stop: function (event, ui) {
+                $("#currenttime").val(getReadableTimeText(ui.value));
+                clearScreenshot($('#workingss'), $('#playerss'));
+                clearWhiteboard($('#workingwb'), $('#playerwb'));
+            }
+        });
+        $("#currenttime").val(getReadableTimeText($("#processbar").slider("value")));
+        $("#total").val(getReadableTimeText(4 * 60 * 60 - 30 * 60));
+        
+        // play course and emit time to server
+        var playstate = "stopped";
+        var interval = null;
+        $("#btnplay").click(function () {
+            playstate = playCourse(playstate, $("#btnplay"), $("#processbar"), $("#currenttime"), $('#workingss'), $('#playerss'), $('#workingwb'), $('#playerwb'));
+        });
+    });
+  </script>
+</body>
+</html>
