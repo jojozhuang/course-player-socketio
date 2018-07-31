@@ -15,6 +15,7 @@ npm start
 Access http://localhost:12103/ in web browser and click 'Play' button, enjoy!
 
 # Deploy to Heroku
+As this is a server application(express), no need to build, just push the entire project folder to Heroku.
 ```bash
 git clone https://github.com/jojozhuang/course-player-socketio.git
 cd course-player-socketio
