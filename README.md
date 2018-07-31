@@ -14,7 +14,16 @@ npm start
 ```
 Access http://localhost:12103/ in web browser and click 'Play' button, enjoy!
 
-# Portfolio 
+# Deploy to Heroku
+```bash
+git clone https://github.com/jojozhuang/course-player-socketio.git
+cd course-player-socketio
+heroku create course-player-socketio
+git push heroku master
+```
+Access https://course-player-socketio.herokuapp.com/ in web browser and click 'Play' button, enjoy!
+
+# Portfolio
 Read portfolio [Course Player(Socket.IO)](http://jojozhuang.github.io/portfolio/course-player-socketio/) to learn the main functions of this course player.
 
 # Tutorial
