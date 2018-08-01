@@ -3,7 +3,7 @@ A realtime online course player, built with Socket.IO, HTML5 Canva, Node.js and 
 
 # Function
 This app is used to play course recordings.
-![image](/public/drag.png)
+![image](/public/player.png)
 
 # Demo
 The [Live Demo](https://course-player-socketio.herokuapp.com/) is hosted on Heroku.
