@@ -21,7 +21,7 @@ io.sockets.on("connection", function(socket) {
   });
 });
 
-var staticPath = __dirname;
+var staticPath = path.resolve(__dirname, "");
 app.use(express.static(staticPath));
 
 server.listen(PORT, function() {
