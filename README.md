@@ -1,4 +1,4 @@
-# Online Course Play
+# Online Course Player
 A realtime online course player, built with Socket.IO, HTML5 Canva, Node.js and jQuery.
 
 # Function
@@ -6,7 +6,7 @@ This app is used to play course recordings.
 ![image](/public/player.png)
 
 # Demo
-The [Live Demo](https://course-player-socketio.herokuapp.com/) is hosted on Heroku.
+Live Demo on [Heroku](https://course-player-socketio.herokuapp.com/) and on [Azure](https://course-player-socketio.azurewebsites.net/).
 
 # Setup Locally
 ```bash
@@ -26,6 +26,9 @@ heroku create course-player-socketio
 git push heroku master
 ```
 Access https://course-player-socketio.herokuapp.com/ in web browser and click 'Play' button, enjoy!
+
+# Deployment
+Follow the tutorial [Deploying Socket.IO App to Azure](https://jojozhuang.github.io/tutorial/react/deploying-socketio-app-to-azure/) to deploy this app to Azure.
 
 # Portfolio
 Read portfolio [Course Player(Socket.IO)](https://jojozhuang.github.io/portfolio/course-player-socketio/) to learn the main functions of this course player.
