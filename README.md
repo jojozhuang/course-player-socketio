@@ -6,7 +6,11 @@ This app is used to play course recordings.
 ![image](/public/player.png)
 
 # Demo
-Live Demo on [Heroku](https://course-player-socketio.herokuapp.com/) and on [Azure](https://course-player-socketio.azurewebsites.net/).
+Two available demos:
+* `Live Demo on Heroku:` <a href="https://course-player-socketio.herokuapp.com/" target="\_blank">https://course-player-socketio.herokuapp.com/</a>
+* `Live Demo on Azure:` <a href="https://course-player-socketio.azurewebsites.net/" target="\_blank">https://course-player-socketio.azurewebsites.net/</a>
+
+*Note: The demo websites may be slow when you access them for the first time. Be patient!*
 
 # Setup Locally
 ```bash
@@ -28,6 +32,8 @@ git push heroku master
 Access https://course-player-socketio.herokuapp.com/ in web browser and click 'Play' button, enjoy!
 
 # Deployment
+Follow the tutorial [Deploying Socket.IO App to Heroku](https://jojozhuang.github.io/tutorial/react/deploying-socketio-app-to-heroku/) to deploy this app to Heroku.
+
 Follow the tutorial [Deploying Socket.IO App to Azure](https://jojozhuang.github.io/tutorial/react/deploying-socketio-app-to-azure/) to deploy this app to Azure.
 
 # Portfolio
