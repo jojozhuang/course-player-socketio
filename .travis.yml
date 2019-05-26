@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "9"
+sudo: false
+
+branches:
+  only:
+  - master
+
+install:
+  - npm install
+
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  keep-history: true
+  api-key:
+    secure: $HEROKU_API_KEY
+  app: course-player-socketio
