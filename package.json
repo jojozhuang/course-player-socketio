@@ -5,10 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\"",
-    "clean": "rm -rf build && mkdir build && mkdir build/apis/ && mkdir build/client/ && mkdir build/model/",
-    "copy": "cp apis/* build/apis/ && cp client/* build/client && cp model/* build/model",
-    "build": "npm run clean && npm run copy"
+    "test": "echo \"Error: no test specified\""
   },
   "keywords": [],
   "author": {
