@@ -30,10 +30,10 @@ server.listen(PORT, function() {
 
 function tick() {
   var dt = new Date();
+  /*
   dt.dateAdd("year", -1);
   dt.dateAdd("month", -9);
-  dt.dateAdd("day", -18);
-  //dt.dateAdd('day', -2);
+  dt.dateAdd("day", -18);*/
   dt = dt.toUTCString();
   io.sockets.send(dt);
 }
