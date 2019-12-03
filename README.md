@@ -40,4 +40,4 @@ Follow the tutorial [Deploying Socket.IO App to Azure](https://jojozhuang.github
 Read portfolio [Course Player(Socket.IO)](https://jojozhuang.github.io/portfolio/course-player-socketio/) to learn the main functions of this course player.
 
 # Tutorial
-Read tutorial [Building Course Player with Node.js and Socket.IO](https://jojozhuang.github.io/tutorial/react/building-course-player-with-nodejs-and-socketio/) to learn how this course player is built.
+Read tutorial [Building Course Player with Node.js and Socket.IO](https://jojozhuang.github.io/tutorial/react-app/building-course-player-with-nodejs-and-socketio/) to learn how this course player is built.
