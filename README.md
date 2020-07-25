@@ -32,12 +32,12 @@ git push heroku master
 Access https://course-player-socketio.herokuapp.com/ in web browser and click 'Play' button, enjoy!
 
 # Deployment
-Follow the tutorial [Deploying Socket.IO App to Heroku](https://jojozhuang.github.io/tutorial/react/deploying-socketio-app-to-heroku/) to deploy this app to Heroku.
+Follow the tutorial [Deploying Socket.IO App to Heroku](https://jojozhuang.github.io/tutorial/deploying-socketio-app-to-heroku) to deploy this app to Heroku.
 
-Follow the tutorial [Deploying Socket.IO App to Azure](https://jojozhuang.github.io/tutorial/react/deploying-socketio-app-to-azure/) to deploy this app to Azure.
+Follow the tutorial [Deploying Socket.IO App to Azure](https://jojozhuang.github.io/tutorial/deploying-socketio-app-to-azure) to deploy this app to Azure.
 
 # Portfolio
-Read portfolio [Course Player(Socket.IO)](https://jojozhuang.github.io/portfolio/course-player-socketio/) to learn the main functions of this course player.
+Read portfolio [Course Player(Socket.IO)](https://jojozhuang.github.io/project/course-player-socketio) to learn the main functions of this course player.
 
 # Tutorial
-Read tutorial [Building Course Player with Node.js and Socket.IO](https://jojozhuang.github.io/tutorial/react-app/building-course-player-with-nodejs-and-socketio/) to learn how this course player is built.
+Read tutorial [Building Course Player with Node.js and Socket.IO](https://jojozhuang.github.io/tutorial/building-course-player-with-nodejs-and-socketio) to learn how this course player is built.
