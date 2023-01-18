@@ -8,9 +8,9 @@ const PORT = process.env.PORT || 12103;
 
 var app = express();
 var server = http.createServer(app);
-var io = require("socket.io").listen(server);
-io.sockets.on("connection", function(socket) {
-  socket.on("updatetime", function(data) {
+var io = require("socket.io")(server);
+io.sockets.on("connection", function (socket) {
+  socket.on("updatetime", function (data) {
     console.log("server.updatetime:" + data.second);
     // Get data for Screenshot
     var ssdata = courseApi.getScreenshotData(data.second);
@@ -24,7 +24,7 @@ io.sockets.on("connection", function(socket) {
 var staticPath = path.resolve(__dirname, "");
 app.use(express.static(staticPath));
 
-server.listen(PORT, function() {
+server.listen(PORT, function () {
   console.log("Server is listening at http://localhost:" + PORT);
 });
 
